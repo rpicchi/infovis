@@ -75,6 +75,10 @@ svg.selectAll("txt_val").data(datos).enter().append("text")
    .attr("y", function(d,i) {return 60+y(i);})
    .text( function(d) {return d.sum.toLocaleString();}  )
 
+  svg.selectAll("rect").transition().duration(1000)
+   .attr("fill","steelblue")
+   .attr("width", function(d,i) {return x(d.sum);})
+  
 }
 </script>
   
