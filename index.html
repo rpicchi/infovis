@@ -1,84 +1,38 @@
-
 <!DOCTYPE html>
-<meta charset="utf-8">
-<style>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> ITBA - DIPLOMATURA EN BIG DATA - VISUALIZACION </title>
+</head>
 
-@import url("/style.css");
+  
+  
+<body>
+  <H1>ITBA </H1>
+  <H1>DIPLOMATURA EN BIG DATA</H1>
+  <H1>VISUALIZACION - 2019 </H1>
+ 
+ <h2>Visualizaciones</h2>
+    <div style="font-size:14px;">
+      <ul>
+        <li>
+          <a href="https://rpicchi.github.io/infovis/timeline.html"> <H3>Timeline: Historia de los espectáculos de Les Luthiers</H3></a>
+        </li>
+        <li>
+          <a href="https://rpicchi.github.io/infovis/mom2019w32-1.html"><H3>Makeover Monday 2019 Semana 32 -Tableau</H3></a>
+        </li>
+        <li>
+          <a href="https://rpicchi.github.io/infovis/mom2019w32-2.html"><H3>Makeover Monday 2019 Semana 32 - Power BI</H3></a>
+        </li>    
+        <li>
+          <a href="https://rpicchi.github.io/infovis/mom2019w33-1.html"><H3>Makeover Monday 2019 Semana 33 - RAW</H3></a>
+        </li>    
+        <li>
+          <a href="https://rpicchi.github.io/infovis/mom2019w33-2.html"><H3>Makeover Monday 2019 Semana 33 - Flourish</H3></a>
+        </li>    
+      </ul>
+    </div>  
 
-</style>
-
-
-<header>
-</header>
-
-<div class="column">
-  <h1>bar chart d3js leyendo un csv que sale de un SQL de data.world</h1>
-  <div class="index">
-    <iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="/aaizemberg/raw/b513a27fcb6f3fcc369fa60a88ff9ac0/46d917acaa229b55284092ca2ad429d82f8dd0e9/" marginwidth="0" marginheight="0" style="height:500px;" scrolling="no"></iframe>
-  </div>
-  <div class="index-pop">
-    <a target="_blank" title="Open Block b513a27fcb6f3fcc369fa60a88ff9ac0 a new window." href="/aaizemberg/raw/b513a27fcb6f3fcc369fa60a88ff9ac0">Open<svg height="16" width="12"><path d="M11 10h1v3c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V3c0-0.55 0.45-1 1-1h3v1H1v10h10V10zM6 2l2.25 2.25-3.25 3.25 1.5 1.5 3.25-3.25 2.25 2.25V2H6z"></path></svg></a>
-  </div>
-  <div class="gist-readme" data-key=""></div>
-  <div class="gist-sources">
-    <div class="gist-source" data-key="index.html">
-      <h2>index.html<a name="index.html" class="anchor" href="#index.html">#</a></h2>
-      <pre><code>…</code></pre>
-    </div>
-  </div>
-  <div class="gist-license">
-    <h2>LICENSE<a name="license" class="anchor" href="#license">#</a></h2>
-    This block appears to have <a target='_blank' href='http://choosealicense.com/no-license/'>no license</a>. Please contact <a target='_blank' href='https://github.com/aaizemberg'>the author</a> to request a license.
-  </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-array/1.2.1/d3-array.min.js" integrity="sha384-c+16cUIc0b/tqEZ9mRvDfI/r1Dg1Yq3JpWgZFW4mjN2QU7XXFWVB90PDFlV8SIAm" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-collection/1.0.4/d3-collection.min.js" integrity="sha384-H/Didu3qLpyrVmUqlvWapaxyhCzc+anaMa9uw+CHWHu+GNfClr91w8QgiLFIp7/V" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-dispatch/1.0.3/d3-dispatch.min.js" integrity="sha384-dGRK/lIqGrmmAoVA9K4pwKI4YL4BxIpaGa1dwU6lcRdpp5OJR6FoMZqxqzvCzFBS" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-request/1.0.6/d3-request.min.js" integrity="sha384-xsZEl8WRzIEBs+gkv/88ttcv7hmGnFJX8t8k6V+fZcrG2y5o1SXsCRLzl2S9HkFU" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-selection/1.1.0/d3-selection.min.js" integrity="sha384-AOxWgfcHKw/K6u7UX8IJ4vy418+zXnA6wB6P4/sobPFG0mM34UlLPHELGvI+aEX5" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.1/showdown.min.js" integrity="sha384-Mcx6WhltjdlkIwTWetAJIBNgD0lLtUcl//A7Ksp/vmVZVD2rzQ949wtmoehrDJd/" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
-<script>
-
-hljs.configure({classPrefix: ""});
-showdown.setFlavor("github");
-
-var gist = {"public":true,"protocol":"https","sha":"46d917acaa229b55284092ca2ad429d82f8dd0e9","files":{"index.html":{"language":"HTML","type":"text/html","filename":"index.html","size":1881,"sha":"767b26698810fad435cc735541a13fc11a502b09"}},"created_at":"2019-08-03T15:59:48Z","updated_at":"2019-08-03T15:59:48Z","description":"bar chart d3js leyendo un csv que sale de un SQL de data.world","owner":{"login":"aaizemberg"},"id":"b513a27fcb6f3fcc369fa60a88ff9ac0"};
-
-var files = d3.values(gist.files);
-
-d3.select(".gist-readme")
-  .data(files, function(d) { return d ? d.filename : this.getAttribute("data-key"); })
-    .each(function(d) {
-      var readme = d3.select(this);
-      d3.text("/aaizemberg/raw/b513a27fcb6f3fcc369fa60a88ff9ac0/46d917acaa229b55284092ca2ad429d82f8dd0e9/" + d.filename, function(error, content) {
-        if (error) content = "Sorry, an error occurred.";
-        readme.html(new showdown.Converter().makeHtml(content));
-        readme.selectAll("code").each(function() { hljs.highlightBlock(this); });
-      });
-    });
-
-d3.selectAll(".gist-source")
-  .data(files, function(d) { return d ? d.filename : this.getAttribute("data-key"); })
-  .select("code")
-    .attr("class", function(d) { return d.language && (d.language === "JSON" ? "javascript" : d.language.toLowerCase()); })
-    .each(function(d) {
-      var code = d3.select(this);
-      d3.text("/aaizemberg/raw/b513a27fcb6f3fcc369fa60a88ff9ac0/46d917acaa229b55284092ca2ad429d82f8dd0e9/" + (d.filename === "index.html" ? "" : d.filename), function(error, content) {
-        if (error) content = "Sorry, an error occurred.";
-        code.text(content);
-        hljs.highlightBlock(code.node());
-      });
-    });
-
-</script>
-
-<script>
-
-GoogleAnalyticsObject = "ga", ga = function() { ga.q.push(arguments); }, ga.q = [], ga.l = +new Date;
-ga("create", "UA-48272912-1", "auto");
-ga("send", "pageview");
-
-</script>
-<script async src="//www.google-analytics.com/analytics.js"></script>
+</body>
+</html>
